@@ -1,10 +1,17 @@
+:root {
+    --primary-color: #1f695f;
+    --secondary-color: #579d91;
+    --tertiary-color:#ae8a68;
+    --text-color: #524438;
+    --background-color: #b9a89a;
+  }
 .Home{
-    padding: 10px;
+
     display: flex;
     flex-direction: column;
     gap:50px;  
-    height: 80vh;
- 
+    height: 100vh;
+    
 }
 .Home img{
     position: absolute;
@@ -20,7 +27,7 @@
 .Heading{
     font-size: 30px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:#1f695f;
+    color:#b9a89a;
     margin-top: 50px;
     margin-left: 50px;
     text-shadow: 
@@ -35,6 +42,36 @@
     margin-left:60px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     -webkit-text-fill-color: aliceblue;
-    -webkit-text-stroke:#524438 1px ;
+    -webkit-text-stroke:#7d736a 1px ;
 }
-.button
+
+button{
+    margin-left: 100px;
+    padding:20px;
+    margin-top:100px;
+    font-size: 30px;
+    font-weight: 900;
+    background: linear-gradient(to right,#524438 50%,#fffcf91a);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    border: none;
+    /*  transition: background-position 2s linear; */
+    animation: gradientShift 4s linear infinite; 
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: right bottom;
+    }
+    50% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: right bottom;
+    }
+}
+button:hover{
+    cursor: pointer;
+    background-position: left bottom;
+
+} 

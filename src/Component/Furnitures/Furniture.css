@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #1f695f;
+    --secondary-color: #579d91;
+    --tertiary-color:#ae8a68;
+    --text-color: #524438;
+    --background-color: #b9a89a;
+  }
+.furniture{
+    margin-top:60px;
+    max-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    
+}
+.type-furni {
+  display: flex; /* Ensure this is set */
+  gap: 15px; /* Apply the gap between images */
+}
+
+
+.type-furni img{
+  width:200px;
+  height:250px;
+ 
+}
