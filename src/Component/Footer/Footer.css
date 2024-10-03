@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #1f695f97;
+  --secondary-color: #579d91;
+  --tertiary-color: #ae8a68;
+  --text-color: #524438;
+  --background-color: #b9a89a;
+}
+
+.main-footer {
+  margin-top: 10vh;
+  background: linear-gradient(to bottom, #579d91ad 20%, #0e6f5f 95%);
+  padding: 20px;
+  height: auto;
+}
+
+.footer-row {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+
+.footer-heading {
+  margin-right: 50px; 
+}
+
+.footer-heading h2 {
+  font-weight: 700;
+  font-family: 'Lucida Sans', sans-serif;
+  font-size: 80px;
+  color: #aa8463;
+  text-shadow: 2px 2px 0px black, -2px -2px 0px black, -2px 2px 0px black, 2px -2px 0px black;
+  margin-top: 40px; 
+}
+
+.footer-stores, .footer-categories {
+  margin-left: 100px; 
+  margin-top: 50px;
+}
+
+.footer-stores h4, .footer-categories h4 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #443a32;
+}
+
+.footer-list {
+  font-size: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-extras {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.social-links h4 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #443a32;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  color: #443a32;
+  border: 2px solid #443a32;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.icon:hover {
+  background-color: #443a32;
+  color: white;
+}
+
+.newsletter h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #443a32;
+}
+
+.email-input {
+  padding: 10px;
+  border: 1px solid #443a32;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  background-color: #443a32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe-btn:hover {
+  background-color: #524438;
+}
+.icons img{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+}

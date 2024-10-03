@@ -1,0 +1,95 @@
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+}
+
+/* Move hover effect to product-detail */
+.product-detail:hover .product-image img {
+    opacity: 0.5;
+}
+
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 25vh; 
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #1f695f;
+}
+
+.product-info p {
+    font-weight: 200;
+}
+
+.product-info h4 {
+    color: #888;
+}
+
+
+.product-image .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+   
+}
+
+.product-detail:hover .buttons {
+    opacity: 1;
+}
+
+.buy-now, .add-to-cart {
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 120px;
+    background-color: #1f695fc1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buy-now:hover, .add-to-cart:hover {
+    background-color: #c1af9f;
+    border: 2px solid #ccc;
+    color: black;
+    font-weight: 400;
+}
