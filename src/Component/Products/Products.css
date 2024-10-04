@@ -19,7 +19,6 @@
     position: relative;
 }
 
-/* Move hover effect to product-detail */
 .product-detail:hover .product-image img {
     opacity: 0.5;
 }
@@ -92,4 +91,16 @@
     border: 2px solid #ccc;
     color: black;
     font-weight: 400;
+}
+.product-detail {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out 0.1s, transform 0.5s ease-out 0.1s;
+    
+}
+
+
+.product-detail.pop-up {
+    opacity: 1;
+    transform: translateY(0);
 }

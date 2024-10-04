@@ -1,19 +1,21 @@
 :root {
     --primary-color: #1f695f;
     --secondary-color: #579d91;
-    --tertiary-color:#ae8a68;
+    --tertiary-color: #ae8a68;
     --text-color: #524438;
     --background-color: #b9a89a;
-  }
-.Home{
-
+}
+html, body {
+    overflow-x: hidden; 
+}
+.Home {
     display: flex;
     flex-direction: column;
-    gap:50px;  
+    gap: 50px;  
     height: 100vh;
-    
+    width: 100vw;
 }
-.Home img{
+.Home img {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,13 +23,11 @@
     height: 100%;
     object-fit: cover; 
     z-index: -1; 
-
-  
 }
-.Heading{
+.Heading {
     font-size: 30px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:#b9a89a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #b9a89a;
     margin-top: 50px;
     margin-left: 50px;
     text-shadow: 
@@ -36,26 +36,24 @@
         -2px 2px 0px black,
         2px -2px 0px black;
 }
-.para{
+.para {
     font-size: 30px;
-    font-weight:600;
-    margin-left:60px;
+    font-weight: 600;
+    margin-left: 60px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     -webkit-text-fill-color: aliceblue;
-    -webkit-text-stroke:#7d736a 1px ;
+    -webkit-text-stroke: #7d736a 1px;
 }
-
-.para button{
+.para button {
     margin-left: 100px;
-    padding:20px;
-    margin-top:100px;
+    padding: 20px;
+    margin-top: 100px;
     font-size: 30px;
     font-weight: 900;
-    background: linear-gradient(to right,#524438 50%,#fffcf91a);
+    background: linear-gradient(to right, #524438 50%, #fffcf91a);
     background-position: right bottom;
     background-size: 200% 100%;
     border: none;
-    /*  transition: background-position 2s linear; */
     animation: gradientShift 4s linear infinite; 
 }
 
@@ -70,8 +68,22 @@
         background-position: right bottom;
     }
 }
-button:hover{
+button:hover {
     cursor: pointer;
     background-position: left bottom;
+}
 
-} 
+@media (max-width: 584px) {
+    .para {
+        font-size: 20px;
+        margin-left: 20px; 
+    }
+    .para button {
+        margin-left: 0;
+        margin-top: 20px; 
+        padding: 15px; 
+        width: 80%; 
+        font-size: 20px; 
+        text-align: center; 
+    }
+}

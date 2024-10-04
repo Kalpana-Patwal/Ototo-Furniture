@@ -1,25 +1,47 @@
-import React from 'react'
-import logo from '../../assets/logo.webp'
-import './Navbar.css'
+import React, { useState } from 'react';
+import logo from '../../assets/logo.webp';
+import close from '../../assets/close.png';
+import Menu from '../../assets/menu.png';
+import './Navbar.css';
+
 const Navbar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
-  
-    <div className="navbar" id="nav">
+    <div className="navbar">
+      <img src={logo} alt="Logo" />
       
-        <img src={logo} alt=""/>
-      
-      <div className="navbar-content">
+
+      <div className="navbar-content large-menu">
         <ul>
-            <li>Home</li>
-            <li>Category</li>
-            <li>Stores</li>
-            <li>Contact</li>
+          <li>Home</li>
+          <li>Category</li>
+          <li>Stores</li>
+          <li>Contact</li>
+          <li>Login/SignUp</li>
         </ul>
       </div>
 
-      
-    </div>
-  )
-}
+      <div className="menu-icon">
+        <img src={Menu} alt="Menu" onClick={toggleSidebar} />
+      </div>
 
-export default Navbar
+    
+      <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <ul>
+          <li><a onClick={toggleSidebar}><img src={close} alt="Close" /></a></li> {/* Close Icon */}
+          <li>Home</li>
+          <li>Category</li>
+          <li>Stores</li>
+          <li>Contact</li>
+          <li>Login/SignUp</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

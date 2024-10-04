@@ -9,21 +9,29 @@ import BrownDining from '../../assets/BrownDining.jpg';
 
 export default function Category() {
   const headingRef = useRef(null);
+  const para2Ref = useRef(null);
+  
   const [isHeadingVisible, setHeadingVisible] = useState(false);
+  const [isPara2Visible, setPara2Visible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const headingElement = headingRef.current;
+      const para2Element = para2Ref.current;
+      
       if (headingElement) {
         const headingRect = headingElement.getBoundingClientRect();
-       
         setHeadingVisible(headingRect.top <= window.innerHeight && headingRect.bottom >= 0);
+      }
+
+      if (para2Element) {
+        const para2Rect = para2Element.getBoundingClientRect();
+        setPara2Visible(para2Rect.top <= window.innerHeight && para2Rect.bottom >= 0);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -46,9 +54,10 @@ export default function Category() {
           </span>
         </div> 
       </div>
-      <div className='para2'>
-        <p>"Transform your space with personalized furniture, crafted to fit your unique style and needs. 
-          <br /> From materials to design, every piece is tailored just for you,<br />  ensuring a perfect blend of comfort and elegance." 
+      <div className={`para2 ${isPara2Visible ? 'visible' : ''}`} ref={para2Ref}>
+        <p>
+          "Transform your space with personalized furniture, crafted to fit your unique style and needs. 
+          <br /> From materials to design, every piece is tailored just for you, ensuring a perfect blend of comfort and elegance."
         </p>
       </div>
     </>

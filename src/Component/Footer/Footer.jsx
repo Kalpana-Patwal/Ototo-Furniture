@@ -42,7 +42,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* New Social Links & Newsletter Section */}
           <div className="footer-extras">
             <div className="social-links">
               <h4>Follow Us</h4>
