@@ -5,7 +5,7 @@ import background5 from '../../assets/background5.jpg'
 
 const Home = () => {
   const navigate=useNavigate();
-  
+
   const ShopNowHandler=()=>{
     navigate('/shopnow')
   

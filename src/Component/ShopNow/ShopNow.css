@@ -1,5 +1,111 @@
 
-.ShopNow_list img{
-width: 50px;
-height: 50px;
-border-radius: 50%;}
+.ShopNow_list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .ShopNow_list li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  h2 {
+    margin-left: 15px;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 25px;
+    color: #aa8463;
+    text-shadow: 2px 2px #333;
+  }
+  
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-container input[type="search"] {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 800px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    padding-left:35px;
+  }
+  .category-dropdown{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    right: 10px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  .category-dropdown{
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .language-dropdown {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .language-dropdown:hover {
+    border-color: #333;
+  }
+  
+  .user-cart-group {
+    display: flex;
+    align-items: center;
+   margin-left: auto;
+  }
+  
+  .user-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+  }
+  
+  .add-to-cart img {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+  }
+  
+ 
+  .ShopNow_list li {
+    cursor: pointer;
+  }
+  
