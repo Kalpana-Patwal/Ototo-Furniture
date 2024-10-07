@@ -1,8 +1,15 @@
 import React from 'react'
 import './Home.css'
+import { useNavigate } from 'react-router-dom'
 import background5 from '../../assets/background5.jpg'
 
 const Home = () => {
+  const navigate=useNavigate();
+  
+  const ShopNowHandler=()=>{
+    navigate('/shopnow')
+  
+  }
   return (
   <div className="Home">
     <img src={background5} alt="" />
@@ -11,7 +18,7 @@ const Home = () => {
       </div>
       <div className='para'>
       <p>Customizable options to suit </p><p>your specific needs and preferences</p>
-      <button>Shop Now</button>
+      <button onClick={ShopNowHandler}>Shop Now</button>
     </div>
     </div>
     

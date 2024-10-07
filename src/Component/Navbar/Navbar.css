@@ -83,27 +83,37 @@
     font-size: 20px;
 }
 
-@media screen and (max-width: 1049px) {
-   
+@media screen and (min-width: 391px) and (max-width: 1049px) {
+    
     .navbar-content {
         display: none;
     }
 
+ 
+    .menu-icon {
+        display: block;
+    
+    }
+}
+
+@media screen and (max-width: 390px) {
   
+    .navbar-content {
+        display: none;
+    }
+
+ 
     .menu-icon {
         display: block;
     }
 }
 
-@media screen and (min-width: 1049px) {
-    
-    .menu-icon {
-        display: none;
-    }
-
-    
+@media screen and (min-width: 1050px) {
     .navbar-content {
         display: flex;
     }
-}
 
+    .menu-icon {
+        display: none;
+    }
+}
