@@ -10,6 +10,7 @@ const Home = () => {
     navigate('/shopnow')
   
   }
+  
   return (
   <div className="Home">
     <img src={background5} alt="" />

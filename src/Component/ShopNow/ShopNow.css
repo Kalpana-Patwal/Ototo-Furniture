@@ -6,6 +6,8 @@
     background-color: #fff;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    background-color: #aa846389;
     
   }
   
@@ -22,9 +24,10 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: 2px solid #333;
   }
   
-  h2 {
+ .ShopNow_list h2 {
     margin-left: 15px;
     font-family: 'Lucida Sans', sans-serif;
     font-size: 25px;
@@ -42,17 +45,17 @@
     border: 2px solid #ccc;
     border-radius: 5px;
     outline: none;
-    width: 800px;
+    width: 900px;
     transition: all 0.3s ease;
     font-size: 16px;
     padding-left:35px;
+   
   }
   .category-dropdown{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    
     right: 10px;
   }
   
@@ -65,7 +68,7 @@
     height: 20px;
   }
   .category-dropdown{
-    padding: 5px 10px;
+  
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -90,6 +93,7 @@
     display: flex;
     align-items: center;
    margin-left: auto;
+  
   }
   
   .user-icon {
@@ -98,14 +102,75 @@
     margin-right: 15px;
   }
   
-  .add-to-cart img {
+  .add-cart{
+    display: flex;
+    flex-direction:column;
+   align-items: center;
+  }
+  .add-cart img {
     width: 25px;
     height: 25px;
-    margin-left: 5px;
+   
+
   }
   
  
   .ShopNow_list li {
     cursor: pointer;
+  }
+  
+  
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%; 
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .carousel-item h1 {
+    font-size: 80px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px black,
+    2px 2px black,
+    2px 0px black;
+    padding-top: 6rem;
+    font-weight: 800;
+
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
   }
   
