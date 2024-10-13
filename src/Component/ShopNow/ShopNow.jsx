@@ -7,7 +7,17 @@ import search_icon from '../../assets/Search.png';
 import Furniture1 from '../../assets/Furniture1.jpg';
 import Furniture2 from '../../assets/Furniture2.jpg';
 import Furniture3 from '../../assets/Furniture3.jpg';
-
+import ShopChair1 from '../../assets/ShopChair1.png'
+import ShopChair9 from '../../assets/ShopChair9.png'
+import ShopChair5 from '../../assets/ShopChair5.png'
+import ShopChair6 from '../../assets/ShopChair6.png'
+import ShopChair8 from '../../assets/ShopChair8.png'
+import ShopSofa1 from '../../assets/ShopSofa1.jpg'
+import ShopSofa2 from '../../assets/ShopSofa2.jpg'
+import ShopSofa3 from '../../assets/ShopSofa3.jpg'
+import ShopSofa4 from '../../assets/ShopSofa4.jpg'
+import ShopSofa5 from '../../assets/ShopSofa5.jpg'
+import ShopSofa6 from '../../assets/ShopSofa6.jpg'
 const ShopNow = () => {
   const [language, setLanguage] = useState('English');
   const [category, setCategory] = useState('All');
@@ -86,7 +96,17 @@ const ShopNow = () => {
           </li>
         </ul>
       </nav>
-
+        <div className="nav2">
+          <ul className="second-nav">
+            <li>Living Room</li>
+            <li>Bed Room</li>
+            <li>Dining Room</li>
+            <li>Study Room</li>
+            <li>Luxury Furniture</li>
+            <li>Home Decor</li>
+          </ul>
+        </div>
+        
       <div className='carousel'>
         <div 
           className='carousel-inner'
@@ -113,6 +133,119 @@ const ShopNow = () => {
         <button className='prev' onClick={prevSlide}>&#10094;</button>
         <button className='next' onClick={nextSlide}>&#10095;</button>
       </div>
+            <div className="text">
+            <h4>Our Products</h4>
+            <p>Explore our entire range of distinctive furniture design</p>
+            </div>
+          
+      <div className="Chairs">
+          <div className="Chairsbg">
+            <div className="chair-card">
+              <img src={ShopChair1} alt="Chair 1" />
+              <p>Elegance Recliner</p>
+              <p>Price -$120</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair6} alt="Chair 2" />
+          <p>Nordic Lounge Chair</p>
+          <p>Price -$510</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair9} alt="Chair 2" />
+          <p>Vintage Rocking Chair</p>
+          <p>Price -$580</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair8} alt="Chair 2" />
+          <p>Ergonomic Mesh Chair</p>
+          <p>Price -$650</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair6} alt="Chair 2" />
+          <p>Coastal Rattan Chair </p>
+          <p>Price -$170</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair5} alt="Chair 2" />
+          <p>Luxury Velvet Armchair</p>
+          <p>Price -$420</p>
+            </div>  
+          </div>  
+      </div>
+
+    
+
+
+      <div className="Chairs">
+          <div className="Chairsbg">
+            <div className="chair-card">
+              <img src={ShopSofa1} alt="Chair 1" />
+              <p>Classic Leather Couch</p>
+              <p>Price -$820</p>
+            </div>
+            <div className="chair-card">
+              <img src={ShopSofa2} alt="Chair 1" />
+              <p> Sleeper Sofa</p>
+              <p>Price -$680</p>
+            </div>
+            <div className="chair-card">
+              <img src={ShopSofa3} alt="Chair 1" />
+              <p>Elegant Velvet Chaise</p>
+              <p>Price -$520</p>
+            </div>
+            <div className="chair-card">
+              <img src={ShopSofa4} alt="Chair 1" />
+              <p> Modern Sofa</p>
+              <p>Price -$780</p>
+            </div>
+            <div className="chair-card">
+              <img src={ShopSofa5} alt="Chair 1" />
+              <p>Urban Luxe Sectional</p>
+              <p>Price -$350</p>
+            </div>
+            <div className="chair-card">
+              <img src={ShopSofa6} alt="Chair 1" />
+              <p>Opulence Corner Sofa</p>
+              <p>Price -$220</p>
+            </div>
+          </div>
+      </div>
+
+      <div className="Chairs">
+          <div className="Chairsbg">
+            <div className="chair-card">
+              <img src={ShopChair1} alt="Chair 1" />
+              <p>Elegance Recliner</p>
+              <p>Price -$120</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair6} alt="Chair 2" />
+          <p>Nordic Lounge Chair</p>
+          <p>Price -$510</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair9} alt="Chair 2" />
+          <p>Vintage Rocking Chair</p>
+          <p>Price -$580</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair8} alt="Chair 2" />
+          <p>Ergonomic Mesh Chair</p>
+          <p>Price -$650</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair6} alt="Chair 2" />
+          <p>Coastal Rattan Chair </p>
+          <p>Price -$170</p>
+            </div>
+            <div className="chair-card">
+          <img src={ShopChair5} alt="Chair 2" />
+          <p>Luxury Velvet Armchair</p>
+          <p>Price -$420</p>
+            </div>  
+          </div>  
+      </div>
+
 
     </div>
   );
