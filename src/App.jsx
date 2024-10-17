@@ -33,7 +33,7 @@ const AppContent = () => {
         </>
       )}
 
-{location.pathname !== '/login' && <Footer id="foot" />}
+{location.pathname !== '/login' && <Footer/>}
     </>
   );
 }

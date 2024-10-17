@@ -6,37 +6,43 @@ import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const navigate=useNavigate();
-  const LoginHandler=()=>{
-    navigate('/login')
-  }
-  const CategoryHandler=()=>{
-    navigate('/shopnow')
-  }
-  const HomeHandler=()=>{
-    navigate('/')
-  }
+  const navigate = useNavigate();
+
+  const LoginHandler = () => {
+    navigate('/login');
+  };
+
+  const CategoryHandler = () => {
+    navigate('/shopnow');
+  };
+
+  const HomeHandler = () => {
+    navigate('/');
+  };
+
+  const scrollToFooter = () => {
+    
+    const footerElement = document.getElementById('foot');
+    console.log(footerElement); 
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  const scrollToFooter = () => {
-    const footerElement = document.getElementById('foot');
-    if (footerElement) {
-      footerElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   return (
     <div className="navbar">
       <img src={logo} alt="Logo" />
-      
 
       <div className="navbar-content large-menu">
         <ul>
-          <li onClick={HomeHandler }>Home</li>
+          <li onClick={HomeHandler}>Home</li>
           <li onClick={CategoryHandler}>Category</li>
-          <li >Stores</li>
+          <li onClick={scrollToFooter}>Stores</li>
           <li onClick={scrollToFooter}>Contact</li>
           <li onClick={LoginHandler}>Login/SignUp</li>
         </ul>
@@ -46,15 +52,18 @@ const Navbar = () => {
         <img src={Menu} alt="Menu" onClick={toggleSidebar} />
       </div>
 
-    
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <ul>
-          <li><a onClick={toggleSidebar}><img src={close} alt="Close" /></a></li> 
-          <li>Home</li>
+          <li>
+            <a onClick={toggleSidebar}>
+              <img src={close} alt="Close" />
+            </a>
+          </li>
+          <li onClick={HomeHandler}>Home</li>
           <li onClick={CategoryHandler}>Category</li>
           <li>Stores</li>
-          <li>Contact</li>
-          <li>Login/SignUp</li>
+          <li onClick={scrollToFooter}>Contact</li>
+          <li onClick={LoginHandler}>Login/SignUp</li>
         </ul>
       </div>
     </div>

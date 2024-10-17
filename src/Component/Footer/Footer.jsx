@@ -8,6 +8,7 @@ import Insta from '../../assets/insta.png'
 const Footer = () => {
   return (
     <>
+    <footer id="foot">
       <div className="main-footer">
         <div className="footer-row">
           <div className="footer-heading">
@@ -63,6 +64,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      </footer>
     </>
   );
 };
