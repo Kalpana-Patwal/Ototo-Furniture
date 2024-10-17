@@ -7,6 +7,7 @@ import Furniture from './Component/Furnitures/Furniture';
 import Products from './Component/Products/Products';
 import Footer from './Component/Footer/Footer';
 import ShopNow from './Component/ShopNow/ShopNow';
+import Login from './Component/Login/Login'
 
 const AppContent = () => {
   const location = useLocation();  
@@ -20,7 +21,7 @@ const AppContent = () => {
           <Home />
         </>} />
         
-       
+        <Route path="/login" element={<Login/>}/>
         <Route path="/shopnow" element={<ShopNow />} />
       </Routes>
 
@@ -32,8 +33,7 @@ const AppContent = () => {
         </>
       )}
 
-      
-      <Footer />
+{location.pathname !== '/login' && <Footer id="foot" />}
     </>
   );
 }
